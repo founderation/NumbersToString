@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-        List<Integer> numberList = new ArrayList<>(List.of(50,2, 1, 9));
+        List<Integer> numberList = new ArrayList<>(List.of(5045,990, 181, 349,2, 45,99));
 
         System.out.println(highestCombination(numberList));
 
@@ -19,7 +19,7 @@ public class Main {
 
                     //The 2 compared integers are concatenated in both possible ways
                     // to find the higher concatenated number and
-                    // swap the integers to achieve that number
+                    // then swap the integers to achieve that number
 
                     int o1o2 = Integer.valueOf(o1 + "" + o2);
                     int o2o1 = Integer.valueOf(o2 + "" + o1);
