@@ -19,7 +19,7 @@ public class Main {
 
                     //The 2 compared integers are concatenated in both possible ways
                     // to find the higher concatenated number and
-                    // then swap the integers to achieve that number
+                    // then  swap the integers to achieve that number
 
                     int o1o2 = Integer.valueOf(o1 + "" + o2);
                     int o2o1 = Integer.valueOf(o2 + "" + o1);
