@@ -7,34 +7,30 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-        List<Integer> numberList = new ArrayList<>(List.of(45, 15, 47));
+        List<Integer> numberList = new ArrayList<>(List.of(50,2, 1, 9));
 
         System.out.println(highestCombination(numberList));
 
     }
 
-    static final Comparator<Integer> NUMBER_ORDER;
+    static final Comparator<Integer> NUMBER_ORDER = new Comparator<Integer>() {
+                @Override
+                public int compare(Integer o1, Integer o2) {
 
-    static{
+                    int o1o2 = Integer.valueOf(o1 + "" + o2);
+                    int o2o1 = Integer.valueOf(o2 + "" + o1);
 
-        NUMBER_ORDER = new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
+                    if (o1o2 < o2o1) {
 
-                int o1o2 = Integer.valueOf(o1 + "" + o2);
-                int o2o1 = Integer.valueOf(o2 + "" + o1);
+                        return 1;
 
-                if (o1o2 < o2o1) {
+                    } else {
 
-                    return 1;
-
-                } else {
-
-                    return -1;
+                        return -1;
+                    }
                 }
-            }
-        };
-    }
+            };
+
 
     static String highestCombination(List<Integer> numberList) {
 
